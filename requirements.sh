@@ -67,6 +67,20 @@ echo 'AFNI_PLUGINPATH=/usr/lib/afni/plugins'; \
 echo 'PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 } > /etc/environment
 
+{ \
+echo 'FSLDIR=/usr/share/fsl/5.0'; \
+echo 'FSLOUTPUTTYPE=NIFTI_GZ'; \
+echo 'FSLMULTIFILEQUIT=TRUE'; \
+echo 'POSSUMDIR=/usr/share/fsl/5.0'; \
+echo 'LD_LIBRARY_PATH=/usr/lib/fsl/5.0:$LD_LIBRARY_PATH'; \
+echo 'FSLTCLSH=/usr/bin/tclsh'; \
+echo 'FSLWISH=/usr/bin/wish'; \
+echo 'AFNI_MODELPATH=/usr/lib/afni/models'; \
+echo 'AFNI_IMSAVE_WARNINGS=NO'; \
+echo 'AFNI_TTATLAS_DATASET=/usr/share/afni/atlases'; \
+echo 'AFNI_PLUGINPATH=/usr/lib/afni/plugins'; \
+echo 'PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+} >> /etc/profile
 ##### Install specific package versions with pip #####
 pip3 install \
      nipype  \
