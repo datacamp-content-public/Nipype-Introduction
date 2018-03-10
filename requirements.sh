@@ -8,8 +8,6 @@ set -x \
 		which gpg \
 		|| apt-get install -y --no-install-recommends gnupg \
 	; } \
-# Ubuntu includes "gnupg" (not "gnupg2", but still 2.x), but not dirmngr, and gnupg 2.x requires dirmngr
-# so, if we're not running gnupg 1.x, explicitly install dirmngr too
 	&& { \
 		gpg --version | grep -q '^gpg (GnuPG) 1\.' \
 		|| apt-get install -y --no-install-recommends dirmngr \
