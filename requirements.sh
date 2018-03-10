@@ -6,6 +6,18 @@ apt-get install -y apt-transport-https \
      curl \
      gnupg2 \
      software-properties-common
+
+curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | sudo apt-key add -
+
+add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
+   $(lsb_release -cs) \
+   stable"
+
+apt-get update
+
+apt-get install docker-ce
+
 ##### Install specific package versions with pip #####
 pip3 install docker
 # pip3 install pandas==0.22.0
