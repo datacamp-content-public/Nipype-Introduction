@@ -1,6 +1,8 @@
 # If bash command fails, build should error out
 set -e
+
 apt-get update
+
 apt-get install -y apt-transport-https \
      ca-certificates \
      curl \
@@ -16,7 +18,7 @@ add-apt-repository \
 
 apt-get update
 
-apt-get install docker-ce
+apt-get install -y docker-ce
 
 ##### Install specific package versions with pip #####
 pip3 install docker
