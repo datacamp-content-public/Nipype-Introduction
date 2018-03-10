@@ -1,6 +1,7 @@
 # If bash command fails, build should error out
 set -e
-apt-get install apt-transport-https \
+apt-get update
+apt-get install -y apt-transport-https \
      ca-certificates \
      curl \
      gnupg2 \
