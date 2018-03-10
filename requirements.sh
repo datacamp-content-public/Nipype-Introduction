@@ -33,6 +33,17 @@ sed -i -e 's,main *$,main contrib non-free,g' /etc/apt/sources.list.d/neurodebia
 
 apt-get update
 apt-get install -y fsl
+
+# Set up environment
+export FSLDIR=/usr/share/fsl/5.0 \
+FSLOUTPUTTYPE=NIFTI_GZ \
+FSLMULTIFILEQUIT=TRUE \
+POSSUMDIR=/usr/share/fsl/5.0 \
+LD_LIBRARY_PATH=/usr/lib/fsl/5.0:$LD_LIBRARY_PATH \
+FSLTCLSH=/usr/bin/tclsh \
+FSLWISH=/usr/bin/wish
+
+PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:$PATH
 ##### Install specific package versions with pip #####
 pip3 install nipype
 pip3 install requests
