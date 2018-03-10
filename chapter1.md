@@ -20,7 +20,6 @@ key: ecaded3183
 
 `@pre_exercise_code`
 ```{python}
-pip install docker
 ```
 
 `@sample_code`
