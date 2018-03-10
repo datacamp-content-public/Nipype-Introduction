@@ -1,6 +1,6 @@
 ---
-title: Test
-description: Test
+title: Install Docker
+description: Testing the install of docker
 
 ---
 ## Sample exercise
@@ -20,7 +20,7 @@ key: ecaded3183
 
 `@pre_exercise_code`
 ```{python}
-
+pip install docker
 ```
 
 `@sample_code`
