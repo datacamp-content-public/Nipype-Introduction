@@ -81,6 +81,51 @@ echo 'AFNI_TTATLAS_DATASET=/usr/share/afni/atlases'; \
 echo 'AFNI_PLUGINPATH=/usr/lib/afni/plugins'; \
 echo 'PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 } >> /etc/profile
+
+{ \
+echo 'export FSLDIR=/usr/share/fsl/5.0'; \
+echo 'export FSLOUTPUTTYPE=NIFTI_GZ'; \
+echo 'export FSLMULTIFILEQUIT=TRUE'; \
+echo 'export POSSUMDIR=/usr/share/fsl/5.0'; \
+echo 'export LD_LIBRARY_PATH=/usr/lib/fsl/5.0:$LD_LIBRARY_PATH'; \
+echo 'export FSLTCLSH=/usr/bin/tclsh'; \
+echo 'export FSLWISH=/usr/bin/wish'; \
+echo 'export AFNI_MODELPATH=/usr/lib/afni/models'; \
+echo 'export AFNI_IMSAVE_WARNINGS=NO'; \
+echo 'export AFNI_TTATLAS_DATASET=/usr/share/afni/atlases'; \
+echo 'export AFNI_PLUGINPATH=/usr/lib/afni/plugins'; \
+echo 'export PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+} >> /etc/profile
+
+{ \
+echo 'FSLDIR=/usr/share/fsl/5.0'; \
+echo 'FSLOUTPUTTYPE=NIFTI_GZ'; \
+echo 'FSLMULTIFILEQUIT=TRUE'; \
+echo 'POSSUMDIR=/usr/share/fsl/5.0'; \
+echo 'LD_LIBRARY_PATH=/usr/lib/fsl/5.0:$LD_LIBRARY_PATH'; \
+echo 'FSLTCLSH=/usr/bin/tclsh'; \
+echo 'FSLWISH=/usr/bin/wish'; \
+echo 'AFNI_MODELPATH=/usr/lib/afni/models'; \
+echo 'AFNI_IMSAVE_WARNINGS=NO'; \
+echo 'AFNI_TTATLAS_DATASET=/usr/share/afni/atlases'; \
+echo 'AFNI_PLUGINPATH=/usr/lib/afni/plugins'; \
+echo 'PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+} >> /etc/bash.bashrc
+
+{ \
+echo 'export FSLDIR=/usr/share/fsl/5.0'; \
+echo 'export FSLOUTPUTTYPE=NIFTI_GZ'; \
+echo 'export FSLMULTIFILEQUIT=TRUE'; \
+echo 'export POSSUMDIR=/usr/share/fsl/5.0'; \
+echo 'export LD_LIBRARY_PATH=/usr/lib/fsl/5.0:$LD_LIBRARY_PATH'; \
+echo 'export FSLTCLSH=/usr/bin/tclsh'; \
+echo 'export FSLWISH=/usr/bin/wish'; \
+echo 'export AFNI_MODELPATH=/usr/lib/afni/models'; \
+echo 'export AFNI_IMSAVE_WARNINGS=NO'; \
+echo 'export AFNI_TTATLAS_DATASET=/usr/share/afni/atlases'; \
+echo 'export AFNI_PLUGINPATH=/usr/lib/afni/plugins'; \
+echo 'export PATH=/usr/lib/fsl/5.0:/usr/lib/afni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+} >> /etc/bash.bashrc
 ##### Install specific package versions with pip #####
 pip3 install \
      nipype  \
