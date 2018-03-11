@@ -56,7 +56,8 @@ print(res.outputs.out_file)
 
 `@sct`
 ```{python}
-test_object("res", incorrect_msg = "Something is wrong with `res`. Take another look at the instruction.")
+msg = "You don't have to change or remove the predefined variables."
+test_object("res", undefined_msg = msg, incorrect_msg = msg)
 
 # test the print function
 test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
