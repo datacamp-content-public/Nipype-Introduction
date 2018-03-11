@@ -56,6 +56,8 @@ print(res.outputs.out_file)
 
 `@sct`
 ```{python}
+test_object("res", incorrect_msg = "Something is wrong with `res`. Take another look at the instruction.")
+
 # test the print function
 test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
 # general
