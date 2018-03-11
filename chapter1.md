@@ -38,11 +38,19 @@ skullstrip = BET()
 skullstrip.inputs.in_file = subject_data['func'][0]
 skullstrip.inputs.out_file = 'test.nii.gz'
 res = skullstrip.run()
+
 # print out the result contained in res
 ```
 
 `@solution`
 ```{python}
+from nipype.interfaces.fsl import BET
+skullstrip = BET()
+skullstrip.inputs.in_file = subject_data['func'][0]
+skullstrip.inputs.out_file = 'test.nii.gz'
+res = skullstrip.run()
+
+# print out the result contained in res
 print(res.outputs.out_file)
 ```
 
