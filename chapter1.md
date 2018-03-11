@@ -1,9 +1,12 @@
 ---
 title: Nipype Interface
-description: Test out the nipype interface
+description: >-
+  Test out the nipype interface
+
 
 ---
 ## Using BET
+
 ```yaml
 type: NormalExercise
 lang: python
@@ -13,13 +16,16 @@ key: ecaded3183
 ```
 
 
+
 `@instructions`
 In Nipype, interfaces are python modules that allow you to use various external packages (e.g. FSL, SPM or FreeSurfer), even if they themselves are written in another programming language than python. Such an interface knows what sort of options an external program has and how to execute it.
 
 To illustrate why interfaces are so useful, let's have a look at the brain extraction algorithm BET from FSL. 
 
-I've downloaded a subject from the adhd project using [nilearn](http://nilearn.github.io/modules/generated/nilearn.datasets.fetch_adhd.html) and assigned the output (which is a dictionary) to subject_data. 
+I've downloaded a subject from the adhd project using [nilearn](http://nilearn.github.io/modules/generated/nilearn.datasets.fetch_adhd.html) and assigned the output (which is a dictionary) to subject_data.
+
 `@hint`
+
 
 `@pre_exercise_code`
 ```{python}
@@ -30,7 +36,6 @@ os.environ['FSLDIR'] = '/usr/share/fsl/5.0'
 os.environ['LD_LIBRARY_PATH'] = '/usr/lib/fsl/5.0:$LD_LIBRARY_PATH'
 subject_data = datasets.fetch_adhd(n_subjects=1, data_dir='./', verbose=0)
 ```
-
 `@sample_code`
 ```{python}
 from nipype.interfaces.fsl import BET
@@ -40,8 +45,8 @@ skullstrip.inputs.out_file = 'test.nii.gz'
 res = skullstrip.run()
 
 # print out the result contained in res
-```
 
+```
 `@solution`
 ```{python}
 from nipype.interfaces.fsl import BET
@@ -53,7 +58,6 @@ res = skullstrip.run()
 # print out the result contained in res
 print(res.outputs.out_file)
 ```
-
 `@sct`
 ```{python}
 msg = "You don't have to change or remove the predefined variables."
@@ -64,3 +68,7 @@ test_function("print", incorrect_msg = "The string you're trying to print is not
 # general
 success_msg('Great Work!')
 ```
+
+
+
+
