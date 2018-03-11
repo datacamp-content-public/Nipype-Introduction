@@ -1,10 +1,9 @@
 ---
-title: Install Docker
-description: Testing the install of docker
+title: Nipype Interface
+description: Test out the nipype interface
 
 ---
-## Sample exercise
-
+## Using BET
 ```yaml
 type: NormalExercise
 lang: python
@@ -15,7 +14,11 @@ key: ecaded3183
 
 
 `@instructions`
+In Nipype, interfaces are python modules that allow you to use various external packages (e.g. FSL, SPM or FreeSurfer), even if they themselves are written in another programming language than python. Such an interface knows what sort of options an external program has and how to execute it.
 
+To illustrate why interfaces are so useful, let's have a look at the brain extraction algorithm BET from FSL. 
+
+I've downloaded a subject from the adhd project using [nilearn](http://nilearn.github.io/modules/generated/nilearn.datasets.fetch_adhd.html) and assigned the output (which is a dictionary) to subject_data. 
 `@hint`
 
 `@pre_exercise_code`
@@ -36,7 +39,11 @@ res = skullstrip.run()
 
 `@sample_code`
 ```{python}
-
+skullstrip = BET()
+skullstrip.inputs.in_file = subject_data['func'][0]
+skullstrip.inputs.out_file = 'test.nii.gz'
+res = skullstrip.run()
+# print out the result contained in res
 ```
 
 `@solution`
