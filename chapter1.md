@@ -25,7 +25,7 @@ To illustrate why interfaces are so useful, let's have a look at the brain extra
 I've downloaded a subject from the adhd project using [nilearn](http://nilearn.github.io/modules/generated/nilearn.datasets.fetch_adhd.html) and assigned the output (which is a dictionary) to subject_data.
 
 `@hint`
-
+run the code first so you can play with the res object
 
 `@pre_exercise_code`
 ```{python}
@@ -44,6 +44,9 @@ skullstrip.inputs.in_file = subject_data['func'][0]
 skullstrip.inputs.out_file = 'test.nii.gz'
 res = skullstrip.run()
 
+# set the out file to out_file
+out_file = res.outputs.out_file
+
 # print out the result contained in res
 
 ```
@@ -55,16 +58,16 @@ skullstrip.inputs.in_file = subject_data['func'][0]
 skullstrip.inputs.out_file = 'test.nii.gz'
 res = skullstrip.run()
 
+# set the out file to out_file
+out_file = res.outputs.out_file
+
 # print out the result contained in res
-print(res.outputs.out_file)
+print(out_file)
 ```
 `@sct`
 ```{python}
-msg = "You don't have to change or remove the predefined variables."
-test_object("res", undefined_msg = msg, incorrect_msg = msg)
-
 # test the print function
-test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
+test_function("print", args=[])
 # general
 success_msg('Great Work!')
 ```
