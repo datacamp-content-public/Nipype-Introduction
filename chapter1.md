@@ -47,7 +47,7 @@ res = skullstrip.run()
 # set the out file to out_file
 out_file = res.outputs.out_file
 
-# print out the result contained in res
+# print out_file
 
 ```
 `@solution`
@@ -61,7 +61,7 @@ res = skullstrip.run()
 # set the out file to out_file
 out_file = res.outputs.out_file
 
-# print out the result contained in res
+# print out_file
 print(out_file)
 ```
 `@sct`
