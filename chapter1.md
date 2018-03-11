@@ -57,8 +57,7 @@ print(res.outputs.out_file)
 `@sct`
 ```{python}
 # test the print function
-test_function("print", incorrect_msg = "Did you type print(res.outputs.out_file)?")
+test_function("print", incorrect_msg = "The string you're trying to print is not quite right. Have another look at the description of this problem.")
 # general
-# test_error()
 success_msg('Great Work!')
 ```
